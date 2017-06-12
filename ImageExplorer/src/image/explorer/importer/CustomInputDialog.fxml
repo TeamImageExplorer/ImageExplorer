@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<SplitPane fx:id="mainPane" dividerPositions="0.48" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="300.0" SplitPane.resizableWithParent="false">
+         <children>
+            <GridPane prefHeight="132.0" prefWidth="283.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="85.0" minWidth="10.0" prefWidth="75.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="75.0" minWidth="10.0" prefWidth="32.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <TextField id="inputField" fx:id="inputField" minWidth="280.0" prefHeight="31.0" prefWidth="280.0" promptText="Enter Something Here" GridPane.rowIndex="1" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Enter a tag:" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Added:" GridPane.columnIndex="1" />
+                  <Text fx:id="count" strokeType="OUTSIDE" strokeWidth="0.0" text="0" GridPane.columnIndex="2" />
+               </children>
+            </GridPane>
+            <Text layoutX="15.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lat:" />
+            <Text layoutX="15.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lon:" />
+            <Text fx:id="lat" layoutX="50.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NONE" />
+            <Text fx:id="lon" layoutX="50.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NONE" />
+            <Text fx:id="lon1" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name this collection?" />
+            <CheckBox fx:id="named" layoutX="156.0" layoutY="234.0" mnemonicParsing="false" text="Yes" />
+            <TextField id="inputField" fx:id="collectionField" layoutX="2.0" layoutY="269.0" minWidth="280.0" prefHeight="31.0" prefWidth="280.0" promptText="Enter Collection Name Here" />
+         </children></AnchorPane>
+    <AnchorPane maxWidth="328.0" minHeight="0.0" minWidth="328.0" prefHeight="160.0" prefWidth="328.0" SplitPane.resizableWithParent="false">
+         <children>
+            <VBox fx:id="mapBox" prefHeight="341.0" prefWidth="328.0" />
+            <Text layoutX="7.0" layoutY="357.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Where were they taken?" />
+         </children></AnchorPane>
+  </items>
+</SplitPane>
