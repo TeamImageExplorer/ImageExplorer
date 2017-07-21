@@ -29,8 +29,8 @@ public class DBConnect {
 			this.jdbcDriver = "com.mysql.jdbc.Driver";
 			Class.forName(this.jdbcDriver);
 			
-			this.dbUser = "root";
-			this.dbPass = "$xP7*-Md@8H";
+			this.dbUser = "root"; // Database account username.
+			this.dbPass = "pass"; // Database account password.
 			this.dbName = "dbImageExplorer";
 			
 			this.dbClientPort = 3307;

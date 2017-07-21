@@ -53,10 +53,10 @@ public class SSHConnect {
 
 			this.jsch = new JSch();
 
-			this.servUser = "imgtech";
-			this.servPass = "$xP7*-Md@8H";
+			this.servUser = "user"; // Host account username.
+			this.servPass = "pass"; // Host account password.
 
-			this.host = "146.187.134.38"; // EWU Test Server
+			this.host = "ip.address"; // Host IP address for SSH.
 			this.port = 22;
 
 			// Get SSH session.
@@ -83,8 +83,8 @@ public class SSHConnect {
 			// Forward the MySQL port (3306) to the client's port (3307).
 			this.session.setPortForwardingL(this.localPort, this.remoteHost, this.remotePort);
 			
-			this.origDir = "/home/imgtech/ImageExplorer/originals";
-			this.thumbDir = "/home/imgtech/ImageExplorer/thumbnails";
+			this.origDir = "/home/" + this.servUser + "/ImageExplorer/originals";
+			this.thumbDir = "/home/" + this.servUser + "/ImageExplorer/thumbnails";
 
 		} catch (JSchException e) {
 			if (!this.connected) {
