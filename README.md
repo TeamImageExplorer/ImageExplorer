@@ -62,8 +62,44 @@ the name of the database in your MySQL instance, which is located in the 'DBConn
 
 ---------------------------------------------------------------------------------------------------------------
 
+### Functionality:
+
+**Import**
++ Select 1 or more images from the local machine
++ Collect optional geographic location, collection name, and 0 or more tags for import
++ Upload full size and thumbnail image via SFTP
++ Upload metadata to SQL DB via SSH
+
+**Update**
++ Make edits in one or more of the table's text boxes to change the data values
++ Click on the "Apply" button to push the changes to the database
+
+**Delete**
++ Select one or more images from the query pane and delete
++ Removes full size image thumbnails from FTP server and all associated metadata from database
+
+**Preview**
++ Double click on a row in the table to load a full size preview of the image
+
+**Export**
++ Select one or more images from the query pane to export
++ Select destination on local HDD
++ Download images selected in query pane to local HDD via SFTP
+
+**Query**
++ Select category of data you'd like to query from (Tag or Collection Name)
++ Apply conditional query parameters and build SQL query
++ Retrieve images from SQL and FTP server based on user query
+
+---------------------------------------------------------------------------------------------------------------
+
 ### Known Bugs:
 
-**Pins on Map** : Often, the pins in our Google Maps implementation don't display.
++ Importing GIFs does not work.
++ Google Maps markers only work some of the time.
++ Google Maps window will stop functioning if dragged outside of bounding window limits.
++ Thread manager creates duplicate entries in query. Limited to a single thread at the moment.
++ Occasionally the query needs to be run twice to populate results.
++ Query by tag shows only the tag queried.
 
 ---------------------------------------------------------------------------------------------------------------
