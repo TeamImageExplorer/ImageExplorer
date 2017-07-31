@@ -38,7 +38,7 @@ a latitude and longitude, which we turn into a user-friendly String representati
 
 ---------------------------------------------------------------------------------------------------------------
 
-### Requirements
+### Requirements:
 
 Although this software is cross-platform, you will need a Linux machine or server with SSH capabilities and an
 instance of MySQL. This will act as a server; it will host your database and collections of images/thumbnails.
@@ -59,5 +59,11 @@ instance of MySQL. This will act as a server; it will host your database and col
 There are some other settings that you may be interested in adjusting, such as the directories in which
 the images and thumbnails are stored on the host machine which is located in the 'SSHConnect.java' file, or
 the name of the database in your MySQL instance, which is located in the 'DBConnect.java' file.
+
+---------------------------------------------------------------------------------------------------------------
+
+### Known Bugs:
+
+**Pins on Map** : Often, the pins in our Google Maps implementation don't display.
 
 ---------------------------------------------------------------------------------------------------------------
